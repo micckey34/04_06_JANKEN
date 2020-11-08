@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/sample.css">
+    <title>じゃんけん</title>
+</head>
+
+<body>
+
+    <main>
+        <header>
+            <h1>じゃんけん</h1>
+        </header>
+        <div class="button">
+            <button id="gu_btn">✊</button>
+            <button id="cho_btn">✌️</button>
+            <button id="par_btn">✋</button>
+        </div>
+        <div class="enemy">
+            <p>相手の出した手は？</p>
+            <p id="enemy"></p>
+        </div>
+        <div class="result">
+            <p>結果は？</p>
+            <p id="judgment"></p>
+        </div>
+        <div class="secret">
+            <a href="Re-zero/start.html" id="text"></a>
+        </div>
+        <div class="www">
+            <a href="Re-zero/start.html">😂</a>
+
+        </div>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $("#gu_btn").on('click', function() {
+            //ここに処理を追加
+            const randomNumber = Math.floor(Math.random() * 30) + 1;
+            console.log(randomNumber);
+            if (randomNumber > 10 && randomNumber < 21) {
+                $('#enemy').text("グー");
+                $('#judgment').text("あいこ😉");
+            } else if (randomNumber > 1 && randomNumber < 11) {
+                $("#enemy").text("チョキ");
+                $('#judgment').text("勝ち😀");
+            } else if (randomNumber > 20) {
+                $("#enemy").text("パー");
+                $('#judgment').text("負け😭");
+            } else if (randomNumber == 1) {
+                $("#enemy").text("チョキ");
+                $('#judgment').text("勝ち😀");
+                $("#text").text("裏サイトに移動します");
+            } else {
+                alert("error");
+            };
+        });
+        $("#cho_btn").on('click', function() {
+            //ここに処理を追加
+            const randomNumber = Math.floor(Math.random() * 30) + 1;
+            console.log(randomNumber);
+            if (randomNumber > 20) {
+                $('#enemy').text("グー");
+                $('#judgment').text("負け😭");
+            } else if (randomNumber > 10 && randomNumber < 21) {
+                $("#enemy").text("チョキ");
+                $('#judgment').text("あいこ😉");
+            } else if (randomNumber == 1000) {
+                $("#enemy").text("パー");
+                $('#judgment').text("勝ち😀");
+            } else if (randomNumber > 1 && randomNumber < 11) {
+                $("#enemy").text("パー");
+                $('#judgment').text("勝ち😀");
+                $("#text").text("裏サイトに移動します");
+            } else {
+                alert("error");
+            };
+        });
+        $("#par_btn").on('click', function() {
+            //ここに処理を追加
+            const randomNumber = Math.floor(Math.random() * 30) + 1;
+            console.log(randomNumber);
+            if (randomNumber > 1 && randomNumber < 11) {
+                $('#enemy').text("グー");
+                $('#judgment').text("勝ち😀");
+            } else if (randomNumber > 20) {
+                $("#enemy").text("チョキ");
+                $('#judgment').text("負け😭");
+            } else if (randomNumber > 10 && randomNumber < 21) {
+                $("#enemy").text("パー");
+                $('#judgment').text("あいこ😉");
+            } else if (randomNumber == 1) {
+                $('#enemy').text("グー");
+                $('#judgment').text("勝ち😀");
+                $("#text").text("裏サイトに移動します");
+            } else {
+                alert("error");
+            };
+        });
+    </script>
+
+</body>
+
+</html>

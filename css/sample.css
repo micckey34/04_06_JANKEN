@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 2rem;
+    background: rgb(0, 0, 157);
+}
+
+main {
+    width: 1000px;
+    height: 650px;
+    margin: 0 auto;
+    padding: 0;
+    text-align: left;
+    background: rgb(117, 114, 210);
+    border: ridge 8px blueviolet;
+    box-shadow: 0 0 150px violet;
+}
+
+header {
+    width: 800px;
+    margin: 0 auto;
+    padding: 50px 100px 0 0;
+    border-bottom: 4px ridge gray;
+}
+
+.button {
+    text-align: center;
+}
+
+button {
+    margin: 50px;
+    height: 120px;
+    width: 120px;
+    font-size: 70px;
+    text-align: center;
+    background-color: gray;
+    /* 定義 */
+    cursor: pointer;
+    border-radius: 50%;
+    border: 3px solid gray;
+    box-shadow: 0 0 20px black;
+}
+
+button:hover {
+    background: blue;
+    box-shadow: 0 0 50px blueviolet;
+}
+
+.enemy {
+    display: flex;
+    height: 100px;
+    line-height: 100px;
+    width: 100%;
+    text-align: center;
+}
+
+.enemy p {
+    width: 50%;
+    font-size: 30px;
+}
+
+.result {
+    display: flex;
+    height: 100px;
+    line-height: 100px;
+    width: 100%;
+    text-align: center;
+}
+
+.result p {
+    width: 50%;
+    font-size: 30px;
+}
+
+.secret {
+    text-align: center;
+    font-size: 40px;
+    transition: 10s;
+}
+
+.secret a {
+    text-decoration: none;
+    display: block;
+    color: #FF8C00;
+    background: -webkit-linear-gradient(0deg, #40E0D0, #FF8C00, #FF0080);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.www {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    transition: 20s;
+}
+
+.www a {
+    width: 100px;
+    font-size: 60px;
+    display: block;
+    line-height: 100px;
+    text-decoration: none;
+}
+
+.www:hover {
+    opacity: 1;
+}

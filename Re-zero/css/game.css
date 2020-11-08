@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.main {
+    display: flex;
+}
+
+.select {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 180px;
+    height: 600px;
+}
+
+.select button {
+    width: 100%;
+    height: 180px;
+    font-size: 100px;
+    background: rgb(30, 130, 245);
+    border: rgb(30, 130, 245) 2px solid;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.select button:hover {
+    background: rgb(200, 200, 200);
+}
+
+.select button:active {
+    background: rgb(180, 180, 200);
+}
+
+.next {
+    border-radius: 50%;
+}
+
+.text-box {
+    display: flex;
+    width: 1200px;
+    height: 180px;
+    position: relative;
+}
+
+.enemy {
+    position: absolute;
+    top: 0;
+    right: 200px;
+    width: 150px;
+    height: 90px;
+    text-align: center;
+    font-size: 35px;
+    background: silver;
+}
+
+.judge {
+    position: absolute;
+    top: 90px;
+    right: 200px;
+    width: 150px;
+    height: 90px;
+    line-height: 90px;
+    text-align: center;
+    font-size: 30px;
+    background: silver;
+}
+
+.text {
+    width: 850px;
+    height: 170px;
+    font-size: 22px;
+    background: silver;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.next-box {
+    position: absolute;
+    right: 20px;
+}
+
+.next {
+    width: 180px;
+    height: 180px;
+    font-size: 100px;
+}
