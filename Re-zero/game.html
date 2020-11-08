@@ -9,31 +9,33 @@
 </head>
 
 <body>
-    <div class="main">
-        <img id="img" src="Re-img/black.jpg" alt="" width="1000px" height="600px">
-        <div class="select">
-            <button id="gu_btn">✊</button>
-            <button id="cho_btn">✌️</button>
-            <button id="par_btn">✋</button>
+    <div class="ui">
+        <div class="main">
+            <img class="img" src="Re-img/black.jpg" width="1000px" height="600px">
+            <div class="select">
+                <button id="gu_btn">✊</button>
+                <button id="cho_btn">✌️</button>
+                <button id="par_btn">✋</button>
+            </div>
         </div>
-    </div>
-    <div class="text-box">
-        <div class="judge">
-            <p id="judgment"></p>
-        </div>
-        <div class="enemy">
-            <p>相手</p>
-            <p id="enemy"></p>
-        </div>
-        <div class="text">
-            <p id="text">START !!
-                <br>右のボタンを押すと進行します。
-                <br>『！！ジャンケンタイム！！』のとき以外にジャンケンボタンを押さないでください。
-                <br>押してしまうとバグります。
-            </p>
-        </div>
-        <div class="next-box">
-            <button id="next" class="next">▶︎</button>
+        <div class="text-box">
+            <div class="judge">
+                <p id="judgment"></p>
+            </div>
+            <div class="enemy">
+                <p>相手</p>
+                <p id="enemy"></p>
+            </div>
+            <div class="text">
+                <p id="text">　　START ！！
+                    <br>右のボタン　▶︎　を押すと進行します。
+                    <br>『！！ジャンケンタイム！！』のとき以外にジャンケンボタンを押さないでください。
+                    <br>押してしまうとバグります。
+                </p>
+            </div>
+            <div class="next-box">
+                <button id="next" class="next">▶︎</button>
+            </div>
         </div>
     </div>
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
@@ -50,7 +52,7 @@
         const text8 = "スバル　：　なんだお前ら！　ふざけるな！";
         const text9 = "不良　：　なんだと〜？";
         const text10 = "不良たちはスバルを殴りつけた。スバルは必死に抵抗する。";
-        const text11 = "！！ジャンケンタイム！！";
+        const text11 = "『！！ジャンケンタイム！！』　✊　✌️　✋　からひとつ選び、勝敗が出たら次に進んでください。";
         // ①勝ちルート
         const text12 = "スバルは力を振り絞り、助けを求めて大声を出した！";
         const text13 = "すると、";
@@ -64,7 +66,7 @@
         const text21 = "スバル　：　助かった〜〜　　ありがとう。俺の名前はスバル！";
         const text22 = "ラインハルト　：　お安い御用さ。スバル。また何か困ったことがあればいつでも頼ってくれ！";
         const text23 = "そういってラインハルトは姿を消した。";
-        const text24 = "スバルはその場をさり、繁華街へたどり着いた";
+        const text24 = "スバルはその場をさり、繁華街へと戻る";
         const text25 = "すると、急に飛び出してきた女の子とぶつかってしまった";
         const text26 = "女の子　：　ごめんなさい！　怪我はない？";
         const text27 = "そう言って倒れたスバルに手を出す";
@@ -91,7 +93,7 @@
         const text73 = "スバル　：　待て待て、結構時間もたっってるし、街で聴き込みをしよう。";
         const text74 = "二人は手分けして街の人たちに聴き込みをした";
         const text75 = "そして、盗んだ相手は貧民街のフェルトだと判明した";
-        const text76 = "スバルと女の子は貧民街へと向かいフェルトのいる盗品蔵にたどり着く";
+        const text76 = "夕刻。スバルと女の子は貧民街へと向かいフェルトのいる盗品蔵にたどり着く";
         const text77 = "中に入ると、、、、";
         const text78 = "そこには二人の死体と、女が立っていた";
         const text79 = "？？？　：　あら、たどり着いてしまったのね";
@@ -99,7 +101,7 @@
         const text81 = "？？？　：　私は、エルザ・グランヒルデ。殺し屋よ";
         const text82 = "女の子　：　なんでこんなこと、、、";
         const text83 = "エルザ　：　あなたたちも見てしまった以上、生かしてはおけないわ。";
-        const text84 = "！！ジャンケンタイム！！";
+        const text84 = "『！！ジャンケンタイム！！』　✊　✌️　✋　からひとつ選び、勝敗が出たら次に進んでください。";
         // ②勝ちルート
         const text85 = "襲いかかるエルザ";
         const text86 = "女の子は応戦している。スバルも落ちていた剣を拾いなんとか応戦する";
@@ -276,14 +278,14 @@
             } else if (textNumber == 2) {
                 $("#text").text(text2);
             } else if (textNumber == 3) {
-                $('.main').children('img').attr('src', 'Re-img/subaru1.jpg');
+                $('.img').attr('src', 'Re-img/opening.jpg');
                 $("#text").text(text3);
             } else if (textNumber == 4) {
                 $("#text").text(text4);
             } else if (textNumber == 5) {
                 $("#text").text(text5);
             } else if (textNumber == 6) {
-                $('.main').children('img').attr('src', 'Re-img/tontinkan.png');
+                $('.img').attr('src', 'Re-img/tontinkan.png');
                 $("#text").text(text6);
             } else if (textNumber == 7) {
                 $("#text").text(text7);
@@ -302,12 +304,12 @@
             } else if (textNumber == 14) {
                 $("#text").text(text14)
             } else if (textNumber == 15) {
-                $('.main').children('img').attr('src', 'Re-img/rainharuto1.png');
+                $('.img').attr('src', 'Re-img/rainharuto1.png');
                 $("#text").text(text15)
             } else if (textNumber == 16) {
                 $("#text").text(text16)
             } else if (textNumber == 17) {
-                $('.main').children('img').attr('src', 'Re-img/rainharuto2.png');
+                $('.img').attr('src', 'Re-img/rainharuto2.jpg');
                 $("#text").text(text17)
             } else if (textNumber == 18) {
                 $("#text").text(text18)
@@ -324,6 +326,7 @@
             } else if (textNumber == 24) {
                 $("#text").text(text24)
             } else if (textNumber == 25) {
+                $('.img').attr('src', 'Re-img/emiria4.jpg');
                 $("#text").text(text25)
             } else if (textNumber == 26) {
                 $("#text").text(text26)
@@ -334,6 +337,7 @@
             } else if (textNumber == 29) {
                 $("#text").text(text29)
             } else if (textNumber == 30) {
+                $('.img').attr('src', 'Re-img/emiria7.jpg');
                 $("#text").text(text30)
             } else if (textNumber == 31) {
                 $("#text").text(text31)
@@ -349,12 +353,12 @@
             } else if (textNumber == 62) {
                 $("#text").text(text62)
             } else if (textNumber == 63) {
-                $('.main').children('img').attr('src', 'Re-img/emiria1.png');
+                $('.img').attr('src', 'Re-img/emiria1.png');
                 $("#text").text(text63)
             } else if (textNumber == 64) {
                 $("#text").text(text64)
             } else if (textNumber == 65) {
-                $('.main').children('img').attr('src', 'Re-img/emiria2.png');
+                $('.img').attr('src', 'Re-img/emiria2.png');
                 $("#text").text(text65)
             } else if (textNumber == 66) {
                 $("#text").text(text66)
@@ -365,6 +369,7 @@
             } else if (textNumber == 69) {
                 $("#text").text(text69)
             } else if (textNumber == 70) {
+                $(".img").attr('src', 'Re-img/pack2.jpg');
                 $("#text").text(text70)
             } else if (textNumber == 71) {
                 $("#text").text(text71)
@@ -377,6 +382,7 @@
             } else if (textNumber == 75) {
                 $("#text").text(text75)
             } else if (textNumber == 76) {
+                $('.img').attr('src', 'Re-img/subaru3.jpg');
                 $("#text").text(text76)
             } else if (textNumber == 77) {
                 $("#text").text(text77)
@@ -387,7 +393,7 @@
             } else if (textNumber == 80) {
                 $("#text").text(text80)
             } else if (textNumber == 81) {
-                $('.main').children('img').attr('src', 'Re-img/eruza1.png');
+                $('.img').attr('src', 'Re-img/eruza1.jpg');
                 $("#text").text(text81)
             } else if (textNumber == 82) {
                 $("#text").text(text82)
@@ -412,7 +418,7 @@
             } else if (textNumber == 92) {
                 $("#text").text(text92)
             } else if (textNumber == 93) {
-                $('.main').children('img').attr('src', 'Re-img/rainharuto3.png');
+                $('.img').attr('src', 'Re-img/rainharuto3.png');
                 $("#text").text(text93)
             } else if (textNumber == 94) {
                 $("#text").text(text94)
@@ -423,7 +429,7 @@
             } else if (textNumber == 97) {
                 $("#text").text(text97)
             } else if (textNumber == 98) {
-                $('.main').children('img').attr('src', 'Re-img/rainharuto4.png');
+                $('.img').attr('src', 'Re-img/rainharuto4.png');
                 $("#text").text(text98)
             } else if (textNumber == 99) {
                 $("#text").text(text99)
@@ -444,7 +450,7 @@
             } else if (textNumber == 107) {
                 $("#text").text(text107)
             } else if (textNumber == 108) {
-                $('.main').children('img').attr('src', 'Re-img/clear.jpg');
+                $('.img').attr('src', 'Re-img/clear.jpg');
                 $("#text").text(text108)
             } else if (textNumber == 109) {
                 $("#text").text(text109)
@@ -456,7 +462,7 @@
             } else if (textNumber == 113) {
                 $("#text").text(text113)
             } else if (textNumber == 114) {
-                $('.main').children('img').attr('src', 'Re-img/subaru-deth1.png');
+                $('.img').attr('src', 'Re-img/subaru-deth1.png');
                 $("#text").text(text114)
             } else if (textNumber == 115) {
                 $("#text").text(text115)
@@ -465,7 +471,7 @@
             } else if (textNumber == 117) {
                 $("#text").text(text117)
             } else if (textNumber == 118) {
-                $('.main').children('img').attr('src', 'Re-img/black.jpg');
+                $('.img').attr('src', 'Re-img/black.jpg');
                 $("#text").text(text118)
             } else if (textNumber == 119) {
                 $("#text").text(text119)
@@ -477,6 +483,7 @@
             } else if (textNumber == 136) {
                 $("#text").text(text136)
             } else if (textNumber == 137) {
+                $('.img').attr('src', 'Re-img/eruza4.jpg');
                 $("#text").text(text137)
             } else if (textNumber == 138) {
                 $("#text").text(text138)
@@ -485,7 +492,7 @@
             } else if (textNumber == 140) {
                 $("#text").text(text140)
             } else if (textNumber == 141) {
-                $('.main').children('img').attr('src', 'Re-img/eruza2.jpg');
+                $('.img').attr('src', 'Re-img/eruza2.jpg');
                 $("#text").text(text141)
             } else if (textNumber == 142) {
                 $("#text").text(text142)
@@ -502,6 +509,7 @@
             } else if (textNumber == 148) {
                 $("#text").text(text148)
             } else if (textNumber == 149) {
+                $('.img').attr('src', 'Re-img/black.jpg');
                 $("#text").text(text149)
             } else if (textNumber == 150) {
                 $("#text").text(text150)
@@ -532,7 +540,7 @@
             } else if (textNumber == 210) {
                 $("#text").text(text210)
             } else if (textNumber == 211) {
-                $('.main').children('img').attr('src', 'Re-img/black.jpg');
+                $('.img').attr('src', 'Re-img/black.jpg');
                 $("#text").text(text211)
             } else if (textNumber == 212) {
                 $("#text").text(text212)
@@ -551,7 +559,7 @@
             } else if (textNumber == 219) {
                 $("#text").text(text219)
             } else if (textNumber == 220) {
-                $('.main').children('img').attr('src', 'Re-img/ramrem.jpg');
+                $('.img').attr('src', 'Re-img/ramrem.jpg');
                 $("#text").text(text220)
             } else if (textNumber == 221) {
                 $("#text").text(text220)
@@ -565,7 +573,7 @@
             } else if (textNumber == 303) {
                 $("#tex").text(text303)
             } else if (textNumber == 304) {
-                $('.main').children('img').attr('src', 'Re-img/sbaru1.jpg');
+                $('.img').attr('src', 'Re-img/subaru1.jpg');
                 $("#text").text(text304)
             } else if (textNumber == 305) {
                 $("#text").text(text305)
@@ -578,7 +586,7 @@
             } else if (textNumber == 309) {
                 $("#text").text(text309)
             } else if (textNumber == 310) {
-                $('.main').children('img').attr('src', 'Re-img/tontinkan.png');
+                $('.img').attr('src', 'Re-img/tontinkan.png');
                 $("#text").text(text310)
             } else if (textNumber == 311) {
                 $("#text").text(text311)

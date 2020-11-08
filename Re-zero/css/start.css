@@ -18,6 +18,11 @@ body {
     width: 1000px;
     margin: 170px auto;
     color: gray;
+    transition: 1s;
+}
+
+.title:hover {
+    opacity: 0;
 }
 
 h1 {

@@ -9,28 +9,30 @@
 </head>
 
 <body>
-    <div class="main">
-        <img id="img" src="Re-img/black.jpg" alt="" width="1000px" height="600px">
-        <div class="select">
-            <button id="gu_btn">✊</button>
-            <button id="cho_btn">✌️</button>
-            <button id="par_btn">✋</button>
+    <div class="ui">
+        <div class="main">
+            <img class="img" src="Re-img/black.jpg" alt="" width="1000px" height="600px">
+            <div class="select">
+                <button id="gu_btn">✊</button>
+                <button id="cho_btn">✌️</button>
+                <button id="par_btn">✋</button>
+            </div>
         </div>
-    </div>
-    <div class="text-box">
-        <div class="judge">
-            <p id="judgment"></p>
-        </div>
-        <div class="enemy">
-            <p>相手</p>
-            <p id="enemy"></p>
-        </div>
-        <div class="text">
-            <p id="text">、、、、、、、、、、、、、、
-            </p>
-        </div>
-        <div class="next-box">
-            <button id="next" class="next">▶︎</button>
+        <div class="text-box">
+            <div class="judge">
+                <p id="judgment"></p>
+            </div>
+            <div class="enemy">
+                <p>相手</p>
+                <p id="enemy"></p>
+            </div>
+            <div class="text">
+                <p id="text">、、、、、、、、、、、、、、
+                </p>
+            </div>
+            <div class="next-box">
+                <button id="next" class="next">▶︎</button>
+            </div>
         </div>
     </div>
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
@@ -49,7 +51,7 @@
         const text10 = "スバル　：　またお前らかよ！";
         const text11 = "不良　：　何言ってやがんだこいつ！　やっちまえ！";
         const text12 = "不良たちはまたもやスバルを殴りつけた。スバルは必死に抵抗する。";
-        const text13 = "！！ジャンケンタイム！！";
+        const text13 = "『！！ジャンケンタイム！！』　✊　✌️　✋　からひとつ選び、勝敗が出たら次に進んでください。";
 
         // ①勝ちルート
         const text14 = "スバルは力を振り絞り、助けを求めて大声を出した！";
@@ -102,7 +104,7 @@
         const text83 = "エルザ　：　それはできないわ、この事を知ってしまった以上全員生かしてはおけない。";
         const text84 = "女の子　：　みんな下がって！！";
         const text85 = "エルザは二本のナイフを持ち出し襲いかかる";
-        const text86 = "！！ジャンケンタイム！！";
+        const text86 = "『！！ジャンケンタイム！！』　✊　✌️　✋　からひとつ選び、勝敗が出たら次に進んでください。";
 
         // ②勝ちルート
         const text87 = "素早い動きと、巧みな技術で襲いかかるエルザ";
@@ -226,18 +228,18 @@
             const max = 1030;
             const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
             console.log(randomNumber);
-            if (randomNumber > 1000 && randomNumber < 1016) {
+            if (randomNumber > 1010 && randomNumber < 1021) {
                 $('#enemy').text("✊");
                 $('#judgment').text("あいこ😉");
                 textNumber += 50;
                 console.log(textNumber);
 
-            } else if (randomNumber == 1000) {
+            } else if (randomNumber < 1011) {
                 $("#enemy").text("✌️");
                 $('#judgment').text("勝ち😀");
                 console.log(textNumber);
 
-            } else if (randomNumber > 1015) {
+            } else if (randomNumber > 1020) {
                 $("#enemy").text("✋");
                 $('#judgment').text("負け😭");
                 textNumber += 100;
@@ -251,19 +253,19 @@
             const max = 1030;
             const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
             console.log(randomNumber);
-            if (randomNumber > 1015) {
+            if (randomNumber > 1020) {
                 $('#enemy').text("✊");
                 $('#judgment').text("負け😭");
                 textNumber += 100;
                 console.log(textNumber);
 
-            } else if (randomNumber > 1000 && randomNumber < 1016) {
+            } else if (randomNumber > 1010 && randomNumber < 1021) {
                 $("#enemy").text("✌️");
                 $('#judgment').text("あいこ😉");
                 textNumber += 50;
                 console.log(textNumber);
 
-            } else if (randomNumber == 1000) {
+            } else if (randomNumber < 1011) {
                 $("#enemy").text("✋");
                 $('#judgment').text("勝ち😀");
                 console.log(textNumber);
@@ -276,18 +278,18 @@
             const max = 1030;
             const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
             console.log(randomNumber);
-            if (randomNumber == 1000) {
+            if (randomNumber < 1011) {
                 $('#enemy').text("✊");
                 $('#judgment').text("勝ち😀");
                 console.log(textNumber);
 
-            } else if (randomNumber > 1015) {
+            } else if (randomNumber > 1020) {
                 $("#enemy").text("✌️");
                 $('#judgment').text("負け😭");
                 textNumber += 100;
                 console.log(textNumber);
 
-            } else if (randomNumber > 1000 && randomNumber < 1016) {
+            } else if (randomNumber > 1010 && randomNumber < 1021) {
                 $("#enemy").text("✋");
                 $('#judgment').text("あいこ😉");
                 textNumber += 50;
@@ -303,7 +305,7 @@
             } else if (textNumber == 2) {
                 $("#text").text(text2);
             } else if (textNumber == 3) {
-                $('.main').children('img').attr('src', 'Re-img/subaru1.jpg');
+                $('.img').attr('src', 'Re-img/subaru1.jpg');
                 $("#text").text(text3);
             } else if (textNumber == 4) {
                 $("#text").text(text4);
@@ -314,7 +316,7 @@
             } else if (textNumber == 7) {
                 $("#text").text(text7);
             } else if (textNumber == 8) {
-                $('.main').children('img').attr('src', 'Re-img/tontinkan.png');
+                $('.img').attr('src', 'Re-img/tontinkan.png');
                 $("#text").text(text8);
             } else if (textNumber == 9) {
                 $("#text").text(text9);
@@ -331,12 +333,12 @@
                 // ①勝ちルート
                 $("#text").text(text14)
             } else if (textNumber == 15) {
-                $('.main').children('img').attr('src', 'Re-img/rainharuto1.png');
+                $('.img').attr('src', 'Re-img/rainharuto1.png');
                 $("#text").text(text15)
             } else if (textNumber == 16) {
                 $("#text").text(text16)
             } else if (textNumber == 17) {
-                $('.main').children('img').attr('src', 'Re-img/rainharuto2.png');
+                $('.img').attr('src', 'Re-img/rainharuto2.jpg');
                 $("#text").text(text17)
             } else if (textNumber == 18) {
                 $("#text").text(text18)
@@ -359,6 +361,7 @@
             } else if (textNumber == 27) {
                 $("#text").text(text27)
             } else if (textNumber == 28) {
+                $('.img').attr('src', 'Re-img/emiria4.jpg');
                 $("#text").text(text28)
             } else if (textNumber == 29) {
                 $("#text").text(text29)
@@ -371,6 +374,7 @@
             } else if (textNumber == 33) {
                 $("#text").text(text33)
             } else if (textNumber == 34) {
+                $('.img').attr('src', 'Re-img/emiria4.jpg');
                 $("#text").text(text34)
             } else if (textNumber == 35) {
                 $("#text").text(text35)
@@ -387,12 +391,12 @@
             } else if (textNumber == 64) {
                 $("#text").text(text64)
             } else if (textNumber == 65) {
-                $('.main').children('img').attr('src', 'Re-img/emiria1.png');
+                $('.img').attr('src', 'Re-img/emiria1.png');
                 $("#text").text(text65)
             } else if (textNumber == 66) {
                 $("#text").text(text66)
             } else if (textNumber == 67) {
-                $('.main').children('img').attr('src', 'Re-img/emiria2.png');
+                $('.img').attr('src', 'Re-img/emiria2.png');
                 $("#text").text(text67)
             } else if (textNumber == 68) {
                 $("#text").text(text68)
@@ -413,6 +417,7 @@
             } else if (textNumber == 76) {
                 $("#text").text(text76)
             } else if (textNumber == 77) {
+                $('.img').attr('src', 'Re-img/subaru3.jpg');
                 $("#text").text(text77)
             } else if (textNumber == 78) {
                 $("#text").text(text78)
@@ -425,7 +430,7 @@
             } else if (textNumber == 82) {
                 $("#text").text(text82)
             } else if (textNumber == 83) {
-                $('.main').children('img').attr('src', 'Re-img/eruza1.png');
+                $('.img').attr('src', 'Re-img/eruza1.jpg');
                 $("#text").text(text83)
             } else if (textNumber == 84) {
                 $("#text").text(text84)
@@ -452,7 +457,7 @@
             } else if (textNumber == 94) {
                 $("#text").text(text94)
             } else if (textNumber == 95) {
-                $('.main').children('img').attr('src', 'Re-img/rainharuto3.png');
+                $('.img').ttr('src', 'Re-img/rainharuto3.png');
                 $("#text").text(text95)
             } else if (textNumber == 96) {
                 $("#text").text(text96)
@@ -463,7 +468,7 @@
             } else if (textNumber == 99) {
                 $("#text").text(text99)
             } else if (textNumber == 100) {
-                $('.main').children('img').attr('src', 'Re-img/rainharuto4.png');
+                $('.img').attr('src', 'Re-img/rainharuto4.png');
                 $("#text").text(text100)
             } else if (textNumber == 101) {
                 $("#text").text(text101)
@@ -478,13 +483,14 @@
             } else if (textNumber == 106) {
                 $("#text").text(text106)
             } else if (textNumber == 107) {
+                $('.img').attr('src', 'Re-img/last1.jpg');
                 $("#text").text(text107)
             } else if (textNumber == 108) {
                 $("#text").text(text108)
             } else if (textNumber == 109) {
                 $("#text").text(text109)
             } else if (textNumber == 110) {
-                $('.main').children('img').attr('src', 'Re-img/clear.jpg');
+                $('.img').attr('src', 'Re-img/clear.jpg');
                 $("#text").text(text110)
             } else if (textNumber == 111) {
                 $("#text").text(text111)
@@ -495,7 +501,7 @@
             } else if (textNumber == 115) {
                 $("#text").text(text115)
             } else if (textNumber == 116) {
-                $('.main').children('img').attr('src', 'Re-img/subaru-deth1.png');
+                $('.img').attr('src', 'Re-img/subaru-deth1.png');
                 $("#text").text(text116)
             } else if (textNumber == 117) {
                 $("#text").text(text117)
@@ -504,7 +510,7 @@
             } else if (textNumber == 119) {
                 $("#text").text(text119)
             } else if (textNumber == 120) {
-                $('.main').children('img').attr('src', 'Re-img/black.jpg');
+                $('.img').attr('src', 'Re-img/black.jpg');
                 $("#text").text(text120)
             } else if (textNumber == 121) {
                 $("#text").text(text121)
@@ -523,9 +529,9 @@
             } else if (textNumber == 141) {
                 $("#text").text(text141)
             } else if (textNumber == 142) {
+                $('.img').attr('src', 'Re-img/emiria8.jpg');
                 $("#text").text(text142)
             } else if (textNumber == 143) {
-                $('.main').children('img').attr('src', 'Re-img/eruza2.jpg');
                 $("#text").text(text143)
             } else if (textNumber == 144) {
                 $("#text").text(text144)
@@ -538,12 +544,14 @@
             } else if (textNumber == 148) {
                 $("#text").text(text148)
             } else if (textNumber == 149) {
+                $('.img').attr('src', 'Re-img/eruza2.jpg');
                 $("#text").text(text149)
             } else if (textNumber == 150) {
                 $("#text").text(text150)
             } else if (textNumber == 151) {
                 $("#text").text(text151)
             } else if (textNumber == 152) {
+                $('.img').attr('src', 'Re-img/black.jpg');
                 $("#text").text(text152)
             } else if (textNumber == 153) {
                 $("#text").text(text153)
@@ -552,6 +560,7 @@
             } else if (textNumber == 155) {
                 $("#text").text(text155)
             } else if (textNumber == 156) {
+                $('.img').attr('src', 'Re-img/subaru1.jpg');
                 $("#text").text(text156)
             } else if (textNumber == 157) {
                 $("#text").text(text157)
@@ -562,6 +571,7 @@
                 $("#text").text(text159)
             } else if (textNumber == 185) {
                 // ②負けルート
+                $('.img').attr('src', 'Re-img/eruza4.jpg');
                 $("#text").text(text185)
             } else if (textNumber == 186) {
                 $("#text").text(text186)
@@ -576,12 +586,14 @@
             } else if (textNumber == 191) {
                 $("#text").text(text191)
             } else if (textNumber == 192) {
+                $('.img').attr('src', 'Re-img/eruza2.jpg');
                 $("#text").text(text192)
             } else if (textNumber == 193) {
                 $("#text").text(text193)
             } else if (textNumber == 194) {
                 $("#text").text(text194)
             } else if (textNumber == 195) {
+                $('.img').attr('src', 'Re-img/black.jpg');
                 textNumber += 104;
                 $("#text").text(text195)
             } else if (textNumber == 200) {
@@ -608,7 +620,7 @@
             } else if (textNumber == 210) {
                 $("#text").text(text210)
             } else if (textNumber == 211) {
-                $('.main').children('img').attr('src', 'Re-img/black.jpg');
+                $('.img').attr('src', 'Re-img/black.jpg');
                 $("#text").text(text211)
             } else if (textNumber == 212) {
                 $("#text").text(text212)
@@ -627,7 +639,7 @@
             } else if (textNumber == 219) {
                 $("#text").text(text219)
             } else if (textNumber == 220) {
-                $('.main').children('img').attr('src', 'Re-img/ramrem.jpg');
+                $('.img').attr('src', 'Re-img/ramrem.jpg');
                 $("#text").text(text220)
             } else if (textNumber == 221) {
                 $("#text").text(text220)
@@ -642,7 +654,7 @@
             } else if (textNumber == 303) {
                 $("#tex").text(text303)
             } else if (textNumber == 304) {
-                $('.main').children('img').attr('src', 'Re-img/sbaru1.jpg');
+                $('.img').attr('src', 'Re-img/subaru1.jpg');
                 $("#text").text(text304)
             } else if (textNumber == 305) {
                 $("#text").text(text305)
@@ -655,7 +667,7 @@
             } else if (textNumber == 309) {
                 $("#text").text(text309)
             } else if (textNumber == 310) {
-                $('.main').children('img').attr('src', 'Re-img/tontinkan.png');
+                $('.img').attr('src', 'Re-img/tontinkan.png');
                 $("#text").text(text310)
             } else if (textNumber == 311) {
                 $("#text").text(text311)
