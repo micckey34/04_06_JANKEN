@@ -11,7 +11,7 @@
 <body>
     <div class="ui">
         <div class="main">
-            <img class="img" src="Re-img/black.jpg" alt="" width="1000px" height="600px">
+            <img class="img" src="Re-img/black.jpg" alt="" width="985px" height="591px">
             <div class="select">
                 <button id="gu_btn">✊</button>
                 <button id="cho_btn">✌️</button>
@@ -27,8 +27,7 @@
                 <p id="enemy"></p>
             </div>
             <div class="text">
-                <p id="text">、、、、、、、、、、、、、、
-                </p>
+                <p id="text">、、、、、、、、、、、、、、</p>
             </div>
             <div class="next-box">
                 <button id="next" class="next">▶︎</button>
@@ -38,6 +37,9 @@
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
     <script src="js/jquery-3.5.1.min.js"></script>
     <script>
+        $("#gu_btn").hide();
+        $("#cho_btn").hide();
+        $("#par_btn").hide();
         let textNumber = 0;
         const text1 = "スバル　：　ここは、、、、、";
         const text2 = "気がつくと、スバルは昼間いたはずの街に立っていた。日も出ている。"
@@ -54,8 +56,8 @@
         const text13 = "『！！ジャンケンタイム！！』　✊　✌️　✋　からひとつ選び、勝敗が出たら次に進んでください。";
 
         // ①勝ちルート
-        const text14 = "スバルは力を振り絞り、助けを求めて大声を出した！";
-        const text15 = "すると、";
+        const text14 = "スバル　：　こうなったらあの手しかないな。衛兵さーん！！！";
+        const text15 = "スバルは力を振り絞り、助けを呼ぶ。　すると、";
         const text16 = "？？？　：　そこまでだ。";
         const text17 = "不良たちが振り向くと赤い髪の青年が立っていた。";
         const text18 = "不良　：　燃えるような赤い髪、腰の竜剣、、、まさか！";
@@ -171,17 +173,17 @@
         const text159 = "そういてスバルは死んだはずの場所に急いで戻る、そして";
 
         // ②負けルート
-        const text185 = "エルザの猛攻にまたしてもスバルは動くことができない";
-        const text186 = "女の子がかなり頑張ってはいるが、少しづつ押されていく";
-        const text187 = "スバルの足元には盗品蔵の剣が落ちていた";
-        const text188 = "スバル　：　このままじゃダメだ、なんとかしないと、、";
-        const text189 = "意を決したスバルは剣をとり助けにいく";
-        const text190 = "しかし、殺し合いなどしたことのないスバル";
-        const text191 = "エルザ　：　今楽しいところなの、あなたは引っ込んでいなさい";
-        const text192 = "エルザはスバルの動きに気がつくとすぐに剣を腹い腹にナイフを突きつける";
-        const text193 = "スバルは一瞬にして腹を裂かれ盛大に血を吹く";
-        const text194 = "スバル　：　くっそ、、、、、";
-        const text195 = "、、、、、、、、";
+        const text187 = "エルザの猛攻にまたしてもスバルは動くことができない";
+        const text188 = "女の子がかなり頑張ってはいるが、少しづつ押されていく";
+        const text189 = "スバルの足元には盗品蔵の剣が落ちていた";
+        const text190 = "スバル　：　このままじゃダメだ、なんとかしないと、、";
+        const text191 = "意を決したスバルは剣をとり助けにいく";
+        const text192 = "しかし、殺し合いなどしたことのないスバル";
+        const text193 = "エルザ　：　今楽しいところなの、あなたは引っ込んでいなさい";
+        const text194 = "エルザはスバルの動きに気がつくとすぐに剣を腹い腹にナイフを突きつける";
+        const text195 = "スバルは一瞬にして腹を裂かれ盛大に血を吹く";
+        const text196 = "スバル　：　くっそ、、、、、";
+        const text197 = "、、、、、、、、";
 
         // ②勝ちルート 続き
         const text200 = "女の子　：　そんなことでいいの？";
@@ -203,7 +205,7 @@
         const text217 = "・・・・・・";
         const text218 = "・・・・・・";
         const text219 = "第一章　完　";
-        const text220 = "　２章　屋敷の一週間編　　続く";
+        const text220 = "　２章　屋敷の一週間編　　続かない";
 
         // ①,②負けルート 続き
         const text300 = "、、、、、、、、、、、、、、";
@@ -228,6 +230,7 @@
             const max = 1030;
             const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
             console.log(randomNumber);
+            $(".select").css('background', 'rgb(71, 3, 134)');
             if (randomNumber > 1010 && randomNumber < 1021) {
                 $('#enemy').text("✊");
                 $('#judgment').text("あいこ😉");
@@ -253,6 +256,7 @@
             const max = 1030;
             const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
             console.log(randomNumber);
+            $(".select").css('background', 'rgb(71, 3, 134)');
             if (randomNumber > 1020) {
                 $('#enemy').text("✊");
                 $('#judgment').text("負け😭");
@@ -278,6 +282,7 @@
             const max = 1030;
             const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
             console.log(randomNumber);
+            $(".select").css('background', 'rgb(71, 3, 134)');
             if (randomNumber < 1011) {
                 $('#enemy').text("✊");
                 $('#judgment').text("勝ち😀");
@@ -301,6 +306,9 @@
             textNumber++;
             console.log(textNumber);
             if (textNumber == 1) {
+                $("#gu_btn").hide();
+                $("#cho_btn").hide();
+                $("#par_btn").hide();
                 $("#text").text(text1);
             } else if (textNumber == 2) {
                 $("#text").text(text2);
@@ -328,9 +336,16 @@
                 $("#text").text(text12)
             } else if (textNumber == 13) {
                 // ジャンケンタイム
+                $("#gu_btn").show();
+                $("#cho_btn").show();
+                $("#par_btn").show();
+                $(".select").css('background', 'gold');
                 $("#text").text(text13)
             } else if (textNumber == 14) {
                 // ①勝ちルート
+                $("#gu_btn").hide();
+                $("#cho_btn").hide();
+                $("#par_btn").hide();
                 $("#text").text(text14)
             } else if (textNumber == 15) {
                 $('.img').attr('src', 'Re-img/rainharuto1.png');
@@ -374,7 +389,7 @@
             } else if (textNumber == 33) {
                 $("#text").text(text33)
             } else if (textNumber == 34) {
-                $('.img').attr('src', 'Re-img/emiria4.jpg');
+                $('.img').attr('src', 'Re-img/emiria6.jpg');
                 $("#text").text(text34)
             } else if (textNumber == 35) {
                 $("#text").text(text35)
@@ -389,6 +404,9 @@
                 $("#text").text(text39)
                     // ①引き分けルート
             } else if (textNumber == 64) {
+                $("#gu_btn").hide();
+                $("#cho_btn").hide();
+                $("#par_btn").hide();
                 $("#text").text(text64)
             } else if (textNumber == 65) {
                 $('.img').attr('src', 'Re-img/emiria1.png');
@@ -407,6 +425,7 @@
             } else if (textNumber == 71) {
                 $("#text").text(text71)
             } else if (textNumber == 72) {
+                $('.img').attr('src', 'Re-img/emiria4.jpg');
                 $("#text").text(text72)
             } else if (textNumber == 73) {
                 $("#text").text(text73)
@@ -430,7 +449,7 @@
             } else if (textNumber == 82) {
                 $("#text").text(text82)
             } else if (textNumber == 83) {
-                $('.img').attr('src', 'Re-img/eruza1.jpg');
+                $('.img').attr('src', 'Re-img/eruza10.jpg');
                 $("#text").text(text83)
             } else if (textNumber == 84) {
                 $("#text").text(text84)
@@ -438,6 +457,10 @@
                 $("#text").text(text85)
             } else if (textNumber == 86) {
                 // ジャンケンタイム
+                $(".select").css('background', 'gold');
+                $("#gu_btn").show();
+                $("#cho_btn").show();
+                $("#par_btn").show();
                 $("#text").text(text86)
             } else if (textNumber == 87) {
                 // ②勝ちルート
@@ -497,6 +520,9 @@
                 textNumber += 88;
             } else if (textNumber == 114) {
                 // ①負けルート
+                $("#gu_btn").hide();
+                $("#cho_btn").hide();
+                $("#par_btn").hide();
                 $("#text").text(text114)
             } else if (textNumber == 115) {
                 $("#text").text(text115)
@@ -519,6 +545,9 @@
                 $("#text").text(text122)
             } else if (textNumber == 137) {
                 // ②引き分けルート
+                $("#gu_btn").hide();
+                $("#cho_btn").hide();
+                $("#par_btn").hide();
                 $("#text").text(text137)
             } else if (textNumber == 138) {
                 $("#text").text(text138)
@@ -569,32 +598,35 @@
             } else if (textNumber == 159) {
                 textNumber += 150;
                 $("#text").text(text159)
-            } else if (textNumber == 185) {
+            } else if (textNumber == 187) {
                 // ②負けルート
+                $("#gu_btn").hide();
+                $("#cho_btn").hide();
+                $("#par_btn").hide();
                 $('.img').attr('src', 'Re-img/eruza4.jpg');
                 $("#text").text(text185)
-            } else if (textNumber == 186) {
-                $("#text").text(text186)
-            } else if (textNumber == 187) {
-                $("#text").text(text187)
             } else if (textNumber == 188) {
-                $("#text").text(text188)
+                $("#text").text(text186)
             } else if (textNumber == 189) {
-                $("#text").text(text189)
+                $("#text").text(text187)
             } else if (textNumber == 190) {
-                $("#text").text(text190)
+                $("#text").text(text188)
             } else if (textNumber == 191) {
-                $("#text").text(text191)
+                $("#text").text(text189)
             } else if (textNumber == 192) {
+                $("#text").text(text190)
+            } else if (textNumber == 193) {
+                $("#text").text(text191)
+            } else if (textNumber == 194) {
                 $('.img').attr('src', 'Re-img/eruza2.jpg');
                 $("#text").text(text192)
-            } else if (textNumber == 193) {
-                $("#text").text(text193)
-            } else if (textNumber == 194) {
-                $("#text").text(text194)
             } else if (textNumber == 195) {
+                $("#text").text(text193)
+            } else if (textNumber == 196) {
+                $("#text").text(text194)
+            } else if (textNumber == 197) {
                 $('.img').attr('src', 'Re-img/black.jpg');
-                textNumber += 104;
+                textNumber += 102;
                 $("#text").text(text195)
             } else if (textNumber == 200) {
                 // ②勝ちルート続き

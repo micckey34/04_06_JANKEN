@@ -1,5 +1,5 @@
 #  ジャンケンアプリ
-## https://github.com/micckey34/04_06_JANKEN
+## https://micckey34.github.io/04_06_Janken/janken.html
 
 ## プロダクトの紹介
 - 

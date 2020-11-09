@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Re:ゼロから始める異世界生活</title>
-    <link rel="stylesheet" href="css/game.css">
+    <link rel="stylesheet" href="css/game copy.css">
 </head>
 
 <body>
     <div class="ui">
         <div class="main">
-            <img class="img" src="Re-img/black.jpg" width="1000px" height="600px">
+            <img class="img" src="Re-img/black.jpg" width="900px" height="540px">
             <div class="select">
                 <button id="gu_btn">✊</button>
                 <button id="cho_btn">✌️</button>
@@ -19,19 +19,17 @@
             </div>
         </div>
         <div class="text-box">
-            <div class="judge">
-                <p id="judgment"></p>
-            </div>
-            <div class="enemy">
-                <p>相手</p>
-                <p id="enemy"></p>
-            </div>
             <div class="text">
-                <p id="text">　　START ！！
+                <p id="text">START ！！
                     <br>右のボタン　▶︎　を押すと進行します。
                     <br>『！！ジャンケンタイム！！』のとき以外にジャンケンボタンを押さないでください。
                     <br>押してしまうとバグります。
                 </p>
+            </div>
+            <div class="judge">
+                <p>相手</p>
+                <p id="enemy"></p>
+                <p id="judgment"></p>
             </div>
             <div class="next-box">
                 <button id="next" class="next">▶︎</button>
@@ -153,7 +151,7 @@
         const text145 = "スバルはもはや何もできない。そして";
         const text146 = "グハッ！！？";
         const text147 = "スバルも腹を切られていた";
-        const text148 = "あまりの痛みと失血で意識を遠のいていく";
+        const text148 = "あまりの痛みと失血で意識が遠のいていく";
         const text149 = "スバル　：　、、、、、、、、";
         const text150 = "、、、スバルは死んでしまった";
         const text151 = "";
@@ -177,7 +175,7 @@
         const text217 = "・・・・・・";
         const text218 = "・・・・・・";
         const text219 = "第一章　完　";
-        const text220 = "　２章　屋敷の一週間編　　続く";
+        const text220 = "　２章　屋敷の一週間編　　続かない";
         // ①負けルート 続き
         const text300 = "、、、、、、、、、、、、、、";
         const text301 = "スバル　：　ん、、、？";
@@ -201,6 +199,7 @@
             const max = 1030;
             const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
             console.log(randomNumber);
+            $(".select").css('background', 'rgb(60, 3, 140)');
             if (randomNumber > 1000 && randomNumber < 1016) {
                 $('#enemy').text("✊");
                 $('#judgment').text("あいこ😉");
@@ -226,6 +225,7 @@
             const max = 1030;
             const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
             console.log(randomNumber);
+            $(".select").css('background', 'rgb(60, 3, 140)');
             if (randomNumber > 1015) {
                 $('#enemy').text("✊");
                 $('#judgment').text("負け😭");
@@ -251,6 +251,7 @@
             const max = 1030;
             const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
             console.log(randomNumber);
+            $(".select").css('background', 'rgb(60, 3, 140)');
             if (randomNumber == 1000) {
                 $('#enemy').text("✊");
                 $('#judgment').text("勝ち😀");
@@ -274,6 +275,9 @@
             textNumber++;
             console.log(textNumber);
             if (textNumber == 1) {
+                $("#gu_btn").hide();
+                $("#cho_btn").hide();
+                $("#par_btn").hide();
                 $("#text").text(text1);
             } else if (textNumber == 2) {
                 $("#text").text(text2);
@@ -296,8 +300,15 @@
             } else if (textNumber == 10) {
                 $("#text").text(text10);
             } else if (textNumber == 11) {
+                $(".select").css('background', 'gold');
+                $("#gu_btn").show();
+                $("#cho_btn").show();
+                $("#par_btn").show();
                 $("#text").text(text11);
             } else if (textNumber == 12) {
+                $("#gu_btn").hide();
+                $("#cho_btn").hide();
+                $("#par_btn").hide();
                 $("#text").text(text12)
             } else if (textNumber == 13) {
                 $("#text").text(text13)
@@ -351,6 +362,9 @@
                 $("#text").text(text35)
                 textNumber += 38;
             } else if (textNumber == 62) {
+                $("#gu_btn").hide();
+                $("#cho_btn").hide();
+                $("#par_btn").hide();
                 $("#text").text(text62)
             } else if (textNumber == 63) {
                 $('.img').attr('src', 'Re-img/emiria1.png');
@@ -393,15 +407,22 @@
             } else if (textNumber == 80) {
                 $("#text").text(text80)
             } else if (textNumber == 81) {
-                $('.img').attr('src', 'Re-img/eruza1.jpg');
+                $('.img').attr('src', 'Re-img/eruza10.jpg');
                 $("#text").text(text81)
             } else if (textNumber == 82) {
                 $("#text").text(text82)
             } else if (textNumber == 83) {
                 $("#text").text(text83)
             } else if (textNumber == 84) {
+                $(".select").css('background', 'gold');
+                $("#gu_btn").show();
+                $("#cho_btn").show();
+                $("#par_btn").show();
                 $("#text").text(text84)
             } else if (textNumber == 85) {
+                $("#gu_btn").hide();
+                $("#cho_btn").hide();
+                $("#par_btn").hide();
                 $("#text").text(text85)
             } else if (textNumber == 86) {
                 $("#text").text(text86)
@@ -458,6 +479,9 @@
                 $("#text").text(text110)
                 textNumber += 89;
             } else if (textNumber == 112) {
+                $("#gu_btn").hide();
+                $("#cho_btn").hide();
+                $("#par_btn").hide();
                 $("#text").text(text112)
             } else if (textNumber == 113) {
                 $("#text").text(text113)
@@ -479,6 +503,9 @@
                 textNumber += 179;
                 $("#text").text(text120)
             } else if (textNumber == 135) {
+                $("#gu_btn").hide();
+                $("#cho_btn").hide();
+                $("#par_btn").hide();
                 $("#text").text(text135)
             } else if (textNumber == 136) {
                 $("#text").text(text136)
@@ -516,6 +543,9 @@
             } else if (textNumber == 151) {
                 window.location.href = 'game2.html';
             } else if (textNumber == 185) {
+                $("#gu_btn").hide();
+                $("#cho_btn").hide();
+                $("#par_btn").hide();
                 textNumber -= 51;
             } else if (textNumber == 200) {
                 $("#text").text(text200)
@@ -565,6 +595,9 @@
                 $("#text").text(text220)
                 window.location.href = 'start.html';
             } else if (textNumber == 300) {
+                $("#gu_btn").hide();
+                $("#cho_btn").hide();
+                $("#par_btn").hide();
                 $("#text").text(text300)
             } else if (textNumber == 301) {
                 $("#text").text(text301)

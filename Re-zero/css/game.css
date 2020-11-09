@@ -1,117 +1,132 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    background: black;
-}
-
-img {
-    width: 1000px;
-    height: 600px;
-}
-
-.ui {
-    width: 1200px;
-    margin: 6px auto;
-    background: rgb(71, 3, 134);
-    border: blueviolet 2px solid;
-}
-
-.main {
-    display: flex;
-    border-bottom: blueviolet 2px solid;
-}
-
-.select {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding: 0 25px;
-    width: 180px;
-    height: 600px;
-    border-left: blueviolet 2px solid;
-}
-
-.select button {
-    width: 150px;
-    height: 150px;
-    font-size: 100px;
-    background: rgb(71, 3, 134);
-    border: blueviolet 3px solid;
-    cursor: pointer;
-    border-radius: 50%;
-}
-
-.select button:hover {
-    background: white;
-}
-
-.select button:active {
-    background: blueviolet;
-}
-
-.text-box {
-    display: flex;
-    width: 1200px;
-    height: 180px;
-    position: relative;
-    background-color: rgb(71, 3, 134);
-    color: snow;
-}
-
-.enemy {
-    position: absolute;
-    top: 0;
-    right: 198px;
-    width: 150px;
-    height: 90px;
-    text-align: center;
-    font-size: 35px;
-    border-right: blueviolet 2px solid;
-}
-
-.judge {
-    position: absolute;
-    top: 90px;
-    right: 198px;
-    width: 150px;
-    height: 90px;
-    line-height: 90px;
-    text-align: center;
-    font-size: 30px;
-    border-right: blueviolet 2px solid;
-}
-
-.text {
-    width: 850px;
-    height: 170px;
-    font-size: 22px;
-    padding-top: 10px;
-    padding-left: 10px;
-}
-
-.next-box {
-    position: absolute;
-    right: 24px;
-    bottom: 15px;
-}
-
-.next {
-    width: 150px;
-    height: 150px;
-    font-size: 100px;
-    border-radius: 10%;
-}
-
-.next-box button {
-    background: rgb(71, 3, 134);
-    border: blueviolet 3px solid;
-    color: snow;
-}
-
-.next-box button:hover {
-    background: rgb(100, 50, 180);
-    color: snow;
-}
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        background: black;
+    }
+    
+    img {
+        width: 985px;
+        height: 591px;
+        border: blueviolet 3px solid;
+        border-bottom: none;
+    }
+    
+    .ui {
+        width: 1165px;
+        margin: 6px auto;
+        background: rgb(71, 3, 134);
+    }
+    
+    .main {
+        display: flex;
+    }
+    
+    .select {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 0 14px 0 13px;
+        width: 180px;
+        height: 591px;
+        background: rgb(71, 3, 134);
+        border-right: blueviolet 3px solid;
+        border-top: blueviolet 3px solid;
+    }
+    
+    .select button {
+        width: 150px;
+        height: 150px;
+        font-size: 100px;
+        background: rgb(71, 3, 134);
+        cursor: pointer;
+        border-radius: 50%;
+        border: blueviolet 3px solid;
+    }
+    
+    .select button:hover {
+        background: white;
+    }
+    
+    .select button:active {
+        background: blueviolet;
+    }
+    
+    .text-box {
+        display: flex;
+        width: 1165px;
+        height: 180px;
+        position: relative;
+        background-color: rgb(71, 3, 134);
+        color: snow;
+        border: blueviolet 3px solid;
+    }
+    
+    .enemy {
+        position: absolute;
+        top: 0;
+        right: 180px;
+        width: 150px;
+        height: 90px;
+        text-align: center;
+        font-size: 35px;
+        border-left: blueviolet 3px solid;
+    }
+    
+    .judge {
+        position: absolute;
+        top: 90px;
+        right: 180px;
+        width: 150px;
+        height: 90px;
+        line-height: 90px;
+        text-align: center;
+        font-size: 30px;
+        border-left: blueviolet 3px solid;
+    }
+    
+    .text {
+        width: 822px;
+        height: 170px;
+        font-size: 22px;
+        padding-top: 10px;
+        padding-left: 10px;
+    }
+    
+    .text p {
+        padding: 1rem;
+    }
+    
+    .next-box {
+        position: absolute;
+        padding: 15px 13px 15px 14px;
+        right: 0;
+        bottom: 0;
+        border-left: blueviolet 3px solid;
+    }
+    
+    .next {
+        width: 150px;
+        height: 150px;
+        font-size: 100px;
+        border-radius: 10%;
+    }
+    
+    .next-box button {
+        background: rgb(71, 3, 134);
+        border: blueviolet 3px solid;
+        color: snow;
+        cursor: pointer;
+    }
+    
+    .next-box button:hover {
+        background: snow;
+        color: rgb(100, 50, 180);
+    }
+    
+    .next-box button:active {
+        background: rgb(100, 50, 180);
+        color: snow;
+    }
