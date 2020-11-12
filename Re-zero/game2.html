@@ -20,7 +20,7 @@
         </div>
         <div class="text-box">
             <div class="text">
-                <p id="text">、、、、、、、、、、、、、、</p>
+                <p id="text">CHAPTER 2<br><br>、、、、、、、、、、、、、、</p>
             </div>
             <div class="judge">
                 <p>相手</p>
@@ -31,8 +31,11 @@
                 <button id="next" class="next">▶︎</button>
             </div>
         </div>
+        <div class="data">
+            <button id="save">save</button>
+            <button id="load">load</button>
+        </div>
     </div>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
     <script src="js/jquery-3.5.1.min.js"></script>
     <script>
         $("#gu_btn").hide();
@@ -228,7 +231,11 @@
             const max = 1030;
             const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
             console.log(randomNumber);
-            $(".select").css('background', 'rgb(71, 3, 134)');
+            $(".select").css('background', 'rgb(60, 3, 140)');
+            $("#gu_btn").hide();
+            $("#cho_btn").hide();
+            $("#par_btn").hide();
+            $("#next").show();
             if (randomNumber > 1010 && randomNumber < 1021) {
                 $('#enemy').text("✊");
                 $('#judgment').text("あいこ😉");
@@ -245,7 +252,6 @@
                 $('#judgment').text("負け😭");
                 textNumber += 100;
                 console.log(textNumber);
-
             }
         });
         $("#cho_btn").on('click', function() {
@@ -254,24 +260,25 @@
             const max = 1030;
             const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
             console.log(randomNumber);
-            $(".select").css('background', 'rgb(71, 3, 134)');
+            $(".select").css('background', 'rgb(60, 3, 140)');
+            $("#gu_btn").hide();
+            $("#cho_btn").hide();
+            $("#par_btn").hide();
+            $("#next").show();
             if (randomNumber > 1020) {
                 $('#enemy').text("✊");
                 $('#judgment').text("負け😭");
                 textNumber += 100;
                 console.log(textNumber);
-
             } else if (randomNumber > 1010 && randomNumber < 1021) {
                 $("#enemy").text("✌️");
                 $('#judgment').text("あいこ😉");
                 textNumber += 50;
                 console.log(textNumber);
-
             } else if (randomNumber < 1011) {
                 $("#enemy").text("✋");
                 $('#judgment').text("勝ち😀");
                 console.log(textNumber);
-
             }
         });
         $("#par_btn").on('click', function() {
@@ -280,33 +287,31 @@
             const max = 1030;
             const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
             console.log(randomNumber);
-            $(".select").css('background', 'rgb(71, 3, 134)');
+            $(".select").css('background', 'rgb(60, 3, 140)');
+            $("#gu_btn").hide();
+            $("#cho_btn").hide();
+            $("#par_btn").hide();
+            $("#next").show();
             if (randomNumber < 1011) {
                 $('#enemy').text("✊");
                 $('#judgment').text("勝ち😀");
                 console.log(textNumber);
-
             } else if (randomNumber > 1020) {
                 $("#enemy").text("✌️");
                 $('#judgment').text("負け😭");
                 textNumber += 100;
                 console.log(textNumber);
-
             } else if (randomNumber > 1010 && randomNumber < 1021) {
                 $("#enemy").text("✋");
                 $('#judgment').text("あいこ😉");
                 textNumber += 50;
                 console.log(textNumber);
-
             }
         });
         $("#next").on('click', function() {
             textNumber++;
             console.log(textNumber);
             if (textNumber == 1) {
-                $("#gu_btn").hide();
-                $("#cho_btn").hide();
-                $("#par_btn").hide();
                 $("#text").text(text1);
             } else if (textNumber == 2) {
                 $("#text").text(text2);
@@ -337,13 +342,11 @@
                 $("#gu_btn").show();
                 $("#cho_btn").show();
                 $("#par_btn").show();
+                $("#next").hide();
                 $(".select").css('background', 'gold');
                 $("#text").text(text13)
             } else if (textNumber == 14) {
-                // ①勝ちルート
-                $("#gu_btn").hide();
-                $("#cho_btn").hide();
-                $("#par_btn").hide();
+                // ①勝ちルート           
                 $("#text").text(text14)
             } else if (textNumber == 15) {
                 $('.img').attr('src', 'Re-img/rainharuto1.png');
@@ -402,9 +405,6 @@
                 $("#text").text(text39)
                     // ①引き分けルート
             } else if (textNumber == 64) {
-                $("#gu_btn").hide();
-                $("#cho_btn").hide();
-                $("#par_btn").hide();
                 $("#text").text(text64)
             } else if (textNumber == 65) {
                 $('.img').attr('src', 'Re-img/emiria1.png');
@@ -459,6 +459,7 @@
                 $("#gu_btn").show();
                 $("#cho_btn").show();
                 $("#par_btn").show();
+                $("#next").hide();
                 $("#text").text(text86)
             } else if (textNumber == 87) {
                 // ②勝ちルート
@@ -518,9 +519,6 @@
                 textNumber += 88;
             } else if (textNumber == 114) {
                 // ①負けルート
-                $("#gu_btn").hide();
-                $("#cho_btn").hide();
-                $("#par_btn").hide();
                 $("#text").text(text114)
             } else if (textNumber == 115) {
                 $("#text").text(text115)
@@ -543,9 +541,6 @@
                 $("#text").text(text122)
             } else if (textNumber == 137) {
                 // ②引き分けルート
-                $("#gu_btn").hide();
-                $("#cho_btn").hide();
-                $("#par_btn").hide();
                 $("#text").text(text137)
             } else if (textNumber == 138) {
                 $("#text").text(text138)
@@ -598,9 +593,6 @@
                 $("#text").text(text159)
             } else if (textNumber == 187) {
                 // ②負けルート
-                $("#gu_btn").hide();
-                $("#cho_btn").hide();
-                $("#par_btn").hide();
                 $('.img').attr('src', 'Re-img/eruza4.jpg');
                 $("#text").text(text185)
             } else if (textNumber == 188) {
@@ -673,7 +665,7 @@
                 $("#text").text(text220)
             } else if (textNumber == 221) {
                 $("#text").text(text220)
-                window.location.href = 'start.html';
+                window.location.href = 'clear.html';
             } else if (textNumber == 300) {
                 // ①②負けルート続き
                 $("#text").text(text300)
@@ -710,6 +702,19 @@
                 textNumber -= 303
             }
         });
+        $('#save').on('click', function() {
+            const saveNumber = textNumber;
+            localStorage.setItem('save', saveNumber);
+            console.log('saveNumber' + saveNumber);
+            alert('保存しました！');
+        })
+        $('#load').on('click', function() {
+            const saveNumber = localStorage.getItem('save');
+            textNumber = saveNumber - 1;
+            console.log('saveNumber' + saveNumber);
+            console.log('loadNumber' + textNumber);
+            alert('続きから再開します！');
+        })
     </script>
 </body>
 

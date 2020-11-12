@@ -1,0 +1,39 @@
+body {
+    background: url(../Re-img/clear10.jpg) center center/cover fixed;
+}
+
+.clear {
+    margin: 2rem;
+    background: linear-gradient(to right, #a460f1, #2719e4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h1 {
+    font-size: 45px;
+}
+
+p {
+    padding-left: 4rem;
+    font-size: 35px;
+}
+
+.back {
+    position: absolute;
+    bottom: 4rem;
+    right: 4rem;
+    width: 350px;
+    background: rgba(200, 200, 200, 0.5);
+    text-align: center;
+}
+
+.back:hover {
+    background: rgb(160, 160, 200);
+}
+
+a {
+    display: block;
+    font-size: 40px;
+    text-decoration: none;
+    color: white;
+}

@@ -10,7 +10,7 @@ body {
 .ui {
     width: 1052px;
     height: 692px;
-    margin: 3rem auto;
+    margin: 2rem auto;
     border: white 2px solid;
 }
 
@@ -105,4 +105,31 @@ body {
 
 .next-box button:active {
     background: rgb(130, 50, 250);
+}
+
+.data {
+    display: flex;
+    width: 1052px;
+    justify-content: flex-end;
+}
+
+.data button {
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    font-size: 20px;
+    outline: none;
+    margin-left: 50px;
+    background: black;
+    color: white;
+}
+
+.data button:hover {
+    background: white;
+    color: black;
+}
+
+.data button:active {
+    background: gray;
 }
